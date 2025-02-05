@@ -1,0 +1,169 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Seção "Sobre Mim" */
+  #about {
+    background: #ff9800;
+    color: white;
+    padding: 60px 0;
+  }
+  
+  #about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #about .about-text h2 {
+    font-size: 2.5em;
+  }
+  
+  #about .about-img img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Seção "Habilidades" */
+  #skills {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .skills-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .skill-card {
+    background-color: #4caf50;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.5em;
+  }
+  
+  /* Seção "Contato" */
+  #contact {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+  }
+  
+  #contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #contact input, #contact textarea {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #contact textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  #contact button {
+    background-color: #ff4081;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #contact button:hover {
+    background-color: #f50057;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    #about .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .skills-list {
+      flex-direction: column;
+    }
+  
+    .skill-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  

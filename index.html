@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Beauty - Ana Silva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #4a4a4a;
+            --background-color: #fff;
+        }
+
+        header {
+            background-color: var(--background-color);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://github.com/EngenhariaCloud/FranAlves/blob/main/cod.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4d94;
+        }
+
+        .services {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about {
+            padding: 5rem 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">FRANCISCA ALVES</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Serviços</a>
+                <a href="#about">Sobre</a>
+                <a href="#contact">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transforme seu Visual</h1>
+            <p>Especialista em cortes, coloração e tratamentos capilares</p>
+            <a href="https://wa.me/5521979134287" target="_blank" class="cta-button">Agende seu Horário</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Cortes</h3>
+                <p>Cortes modernos e personalizados para seu estilo</p>
+            </div>
+            <div class="service-card">
+                <h3>Coloração</h3>
+                <p>As últimas tendências em cores e técnicas</p>
+            </div>
+            <div class="service-card">
+                <h3>Tratamentos</h3>
+                <p>Hidratação e reconstrução para seus cabelos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <img src="imagens/fran.jpg" alt="Profissional">
+            <div>
+                <h2>Sobre Mim</h2>
+                <p>CCom mais de 30 anos de experiência no mundo da estética capilar, Francisca Ferreira Alves é uma profissional apaixonada pelo que faz e comprometida em proporcionar o melhor atendimento e resultados para seus clientes. Ao longo de sua carreira, Francisca se especializou em uma vasta gama de tratamentos capilares, atendendo a diversos tipos de cabelo com técnicas modernas e eficazes.
+
+                    Sua trajetória inclui passagens por renomados centros de beleza, como o Instituto de Beleza Ilha Mar, na Ilha do Governador, e atualmente, ela oferece seus serviços no Instituto de Beleza Cecília Alves, também na Ilha do Governador. Além de atuar em ambientes especializados, Francisca também é autônoma, realizando atendimento domiciliar, proporcionando comodidade e qualidade no conforto da casa de seus clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll para os links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animação do header no scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255,255,255,0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--background-color)';
+            }
+        });
+    </script>
+</body>
+
+</html>
